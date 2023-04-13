@@ -1,9 +1,11 @@
 import "./App.css";
+import PetInfo from "./components/PetInfo";
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello</h1>
+      <PetInfo animal="cat" age="15" />
+      <PetInfo animal="dog " age={25} />
     </div>
   );
 }
