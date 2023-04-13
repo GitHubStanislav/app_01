@@ -1,0 +1,5 @@
+.wrapper{
+    box-shadow: 0 0.125rem 0.25rem rgba(19,31,51,.1);
+    display: flex;
+    margin-top: 10px;
+}
