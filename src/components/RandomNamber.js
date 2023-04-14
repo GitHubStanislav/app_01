@@ -1,9 +1,14 @@
+// props, деструктуризація параметрів props
+// хук useState
+
 import {useState} from "react";
 import generateRandomNum from "../Utils/generateRandomNum";
 
 
 
 function RandomNumber() {
+   // const {maxNum} = props
+    console.log()
     const [randomNum, setRandomNum] = useState(generateRandomNum());
     const changeRandomNum = () => {
         setRandomNum(generateRandomNum());
