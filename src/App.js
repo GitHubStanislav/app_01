@@ -6,8 +6,12 @@ import UseStateExample1 from "./reactExamples/UseStateExample1";
 import UseStateTest from "./reactExamples/UseStateTest";
 import Button from "./components/counterTest/Button";
 import Counter from "./components/counterTest/Counter";
+
 function App() {
   const [count, setCount] = useState(0);
+  const incrementCount = () => {
+    setCount(count + 1);
+  };
   return (
     <div className="App">
       <PetInfo animal="cat" age="15" hasPet={true} />
@@ -16,8 +20,8 @@ function App() {
       <UseStateExample1 />
       <UseStateTest />
       <Counter count={count} />
-      <Button count={count} onClick={setCount} />
-      <Button count={count} onClick={setCount} />
+      <Button onClick={incrementCount} />
+      <Button onClick={incrementCount} />
     </div>
   );
 }

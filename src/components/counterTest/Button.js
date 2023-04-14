@@ -1,13 +1,7 @@
-function Button({ count, onClick }) {
+function Button({ onClick }) {
   return (
     <div>
-      <button
-        onClick={() => {
-          onClick(count + 1);
-        }}
-      >
-        Click me
-      </button>
+      <button onClick={onClick}>Click me</button>
     </div>
   );
 }
