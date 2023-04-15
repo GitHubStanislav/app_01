@@ -1,7 +1,7 @@
-function Button({ onClick }) {
+function Button({ onClick, text }) {
   return (
     <div>
-      <button onClick={onClick}>Click me</button>
+      <button onClick={onClick}>{text}</button>
     </div>
   );
 }

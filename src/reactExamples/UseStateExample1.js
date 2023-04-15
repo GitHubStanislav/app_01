@@ -4,7 +4,7 @@ import generateRandomNum from "../Utils/generateRandomNum";
 function UseStateExample1() {
   const [numbers, setNumbers] = React.useState([1, 2, 3]);
   const addNumber = () => {
-      setNumbers([...numbers, generateRandomNum()])
+    setNumbers([...numbers, generateRandomNum()]);
   };
 
   return (

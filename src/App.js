@@ -7,6 +7,8 @@ import UseStateTest from "./reactExamples/UseStateTest";
 import Button from "./components/counterTest/Button";
 import Counter from "./components/counterTest/Counter";
 
+const texts = ["click me1", "click me2", "click me3", "push me"];
+
 function App() {
   const [count, setCount] = useState(0);
   const incrementCount = () => {
@@ -19,9 +21,13 @@ function App() {
       <RandomNumber maxNum={500} />
       <UseStateExample1 />
       <UseStateTest />
-      <Counter count={count} />
-      <Button onClick={incrementCount} />
-      <Button onClick={incrementCount} />
+
+      <div className="counter_map">
+        <Counter count={count} />
+        {texts.map((text) => {
+          return <Button onClick={incrementCount} text={text} />;
+        })}
+      </div>
     </div>
   );
 }
