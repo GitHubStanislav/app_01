@@ -6,6 +6,7 @@ import UseStateExample1 from "./reactExamples/UseStateExample1";
 import UseStateTest from "./reactExamples/UseStateTest";
 import Button from "./components/counterTest/Button";
 import Counter from "./components/counterTest/Counter";
+import PersonMap from "./components/mapTest/PersonMap";
 
 const texts = ["click me1", "click me2", "click me3", "push me"];
 
@@ -25,9 +26,11 @@ function App() {
       <div className="counter_map">
         <Counter count={count} />
         {texts.map((text) => {
-          return <Button onClick={incrementCount} text={text} />;
+          return <Button onClick={incrementCount} text={text} key={text} />;
         })}
       </div>
+
+      <PersonMap />
     </div>
   );
 }
