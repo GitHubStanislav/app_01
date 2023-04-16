@@ -6,7 +6,8 @@ import UseStateExample1 from "./reactExamples/UseStateExample1";
 import UseStateTest from "./reactExamples/UseStateTest";
 import Button from "./components/counterTest/Button";
 import Counter from "./components/counterTest/Counter";
-import PersonMap from "./components/mapTest/PersonMap";
+import PersonMap1 from "./components/mapTest/PersonMap1";
+import persons from "./components/mapTest/persons";
 
 const texts = ["click me1", "click me2", "click me3", "push me"];
 
@@ -30,7 +31,11 @@ function App() {
         })}
       </div>
 
-      <PersonMap />
+      <div>
+        {persons.map((person) => {
+          return <PersonMap1 {...person} key={person.id} />;
+        })}
+      </div>
     </div>
   );
 }
