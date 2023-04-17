@@ -23,11 +23,18 @@ function App() {
       <UseStateExample1 />
       <UseStateTest />
 
-      <div className="counter_map">
-        <Counter count={count} />
-        {texts.map((text) => {
-          return <Button onClick={incrementCount} text={text} key={text} />;
-        })}
+      <div>
+        <div className="counter_map">
+          <Counter count={count} />
+        </div>
+        <div className="counter_map">
+          {texts.map((text) => {
+            return <Button onClick={incrementCount} text={text} key={text} />;
+          })}
+        </div>
+        <div className="counter_map">
+          <button>Reset</button>
+        </div>
       </div>
       <UsersList />
     </div>

@@ -1,7 +1,7 @@
 function UsersInfo(props) {
   const { id, firstName, lastName, email, img } = props;
   return (
-    <div>
+    <div className="card">
       <h3>
         {firstName} {lastName}
       </h3>

@@ -5,6 +5,12 @@
 .counter_map{
   background-color: aliceblue;
   display: flex;
-  flex-direction: column;
+  justify-content: space-around;
   margin-top: 10px;
+}
+.card{
+  width: 200px;
+  padding: 10px;
+  margin: 10px;
+  box-shadow: 0 0.125rem 0.25rem rgba(19,31,51,.1);
 }
