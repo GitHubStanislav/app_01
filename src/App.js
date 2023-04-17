@@ -6,8 +6,7 @@ import UseStateExample1 from "./reactExamples/UseStateExample1";
 import UseStateTest from "./reactExamples/UseStateTest";
 import Button from "./components/counterTest/Button";
 import Counter from "./components/counterTest/Counter";
-import PersonMap1 from "./components/mapTest/PersonMap1";
-import persons from "./components/mapTest/persons";
+import UsersList from "./components/userInfo/UsersList";
 
 const texts = ["click me1", "click me2", "click me3", "push me"];
 
@@ -30,12 +29,7 @@ function App() {
           return <Button onClick={incrementCount} text={text} key={text} />;
         })}
       </div>
-
-      <div>
-        {persons.map((person) => {
-          return <PersonMap1 {...person} key={person.id} />;
-        })}
-      </div>
+      <UsersList />
     </div>
   );
 }
