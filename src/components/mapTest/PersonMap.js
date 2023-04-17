@@ -4,16 +4,17 @@ function PersonMap() {
   return (
     <div className={"counter_map"}>
       {persons.map((person) => {
+        const { firstName, lastName, id, email, img } = person;
         return (
           <div>
             <h3>
-              {person.firstName} {person.lastName}
+              {firstName} {lastName}
             </h3>
             <ul>
-              <li>{person.id}</li>
-              <li>{person.email}</li>
+              <li>{id}</li>
+              <li>{email}</li>
             </ul>
-            <img src={person.img} alt={"pictures"} />
+            <img src={img} alt={"pictures"} />
           </div>
         );
       })}
