@@ -15,6 +15,9 @@ function App() {
   const incrementCount = () => {
     setCount(count + 1);
   };
+  const resetCount = () => {
+    setCount(0);
+  };
   return (
     <div className="App">
       <PetInfo animal="cat" age="15" hasPet={true} />
@@ -32,9 +35,12 @@ function App() {
             return <Button onClick={incrementCount} text={text} key={text} />;
           })}
         </div>
-        <div className="counter_map">
-          <button>Reset</button>
-        </div>
+
+        {!!count && (
+          <div className="counter_map">
+            <button onClick={resetCount}>Reset</button>
+          </div>
+        )}
       </div>
       <UsersList />
     </div>
