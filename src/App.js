@@ -7,6 +7,8 @@ import UseStateTest from "./reactExamples/UseStateTest";
 import Button from "./components/counterTest/Button";
 import Counter from "./components/counterTest/Counter";
 import UsersList from "./components/userInfo/UsersList";
+import Card from "./components/reactFragments/Card";
+import Login from "./components/login/Login";
 
 const texts = ["click me1", "click me2", "click me3", "push me"];
 
@@ -20,6 +22,8 @@ function App() {
   };
   return (
     <div className="App">
+      <Login />
+      <Card />
       <PetInfo animal="cat" age="15" hasPet={true} />
       <PetInfo animal="dog" age={25} hasPet={false} />
       <RandomNumber maxNum={500} />

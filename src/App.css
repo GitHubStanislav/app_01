@@ -1,16 +1,19 @@
 .App {
   display: flex;
+  justify-content: center;
   flex-direction: column;
+  margin: 0 auto;
+  padding: 10px 20px;
 }
-.counter_map{
+.counter_map {
   background-color: aliceblue;
   display: flex;
   justify-content: space-around;
   margin-top: 10px;
 }
-.card{
+.card {
   width: 200px;
   padding: 10px;
   margin: 10px;
-  box-shadow: 0 0.125rem 0.25rem rgba(19,31,51,.1);
+  box-shadow: 0 0.125rem 0.25rem rgba(19, 31, 51, 0.1);
 }
