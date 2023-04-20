@@ -9,6 +9,7 @@ import Counter from "./components/counterTest/Counter";
 import UsersList from "./components/userInfo/UsersList";
 import Card from "./components/reactFragments/Card";
 import Login from "./components/login/Login";
+import ButtonDelete from "./components/counterTest/ButtonDelete";
 
 const texts = ["click me1", "click me2", "click me3", "push me"];
 
@@ -40,11 +41,7 @@ function App() {
           })}
         </div>
 
-        {!!count && (
-          <div className="counter_map">
-            <button onClick={resetCount}>Reset</button>
-          </div>
-        )}
+        {!!count && <ButtonDelete onClick={resetCount} />}
       </div>
       <UsersList />
     </div>

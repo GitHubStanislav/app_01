@@ -30,8 +30,7 @@ form button {
 }
 
 form button:hover{
-  background-color: #e4e6eb;
-  color: #050505;
+  background-color: blue;
   font-size: 15px;
   transition: 0.3s;
 }
