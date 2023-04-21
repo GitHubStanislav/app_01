@@ -10,6 +10,8 @@ function LoginTest(props) {
       password: password,
     };
     console.log(data);
+    setUserName("");
+    setPassword("");
   };
   return (
     <>

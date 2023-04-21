@@ -12,6 +12,7 @@ import Login from "./components/login/Login";
 import ButtonDelete from "./components/counterTest/ButtonDelete";
 import Wrapper from "./components/Wrapper";
 import LoginTest from "./components/login/LoginTest";
+import UseEffect from "./components/useEffect/UseEffect";
 
 const texts = ["click me1", "click me2", "click me3", "push me"];
 
@@ -25,6 +26,7 @@ function App() {
   };
   return (
     <div className="App">
+      <UseEffect />
       <LoginTest>Login</LoginTest>
       <Wrapper color="lightblue">
         <h2>Text inside of the Wrapper</h2>
