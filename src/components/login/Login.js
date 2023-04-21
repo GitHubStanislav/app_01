@@ -2,18 +2,19 @@ import { useState } from "react";
 import "./Login.css";
 
 function Login() {
-  const [userName, setUserName] = useState("");
-  const [password, setPassword] = useState("");
-  const handleFormSubmit = (event) => {
+  // const [userName, setUserName] = useState("");
+  // const [password, setPassword] = useState("");
+
+  const [data, setData] = useState({ userName: "", password: "" });
+  function handleFormSubmit(event) {
     event.preventDefault();
-    const userData = {
-      username: userName,
-      password: password,
-    };
-    console.log(userData);
-    setPassword("");
-    setUserName("");
-  };
+    console.log(data);
+    setData({ ...data, password: "", userName: "" });
+  }
+
+  function handleInputChange(e, name) {
+    setData({ ...data, [name]: e.target.value });
+  }
   return (
     <>
       <form onSubmit={handleFormSubmit}>
@@ -22,16 +23,16 @@ function Login() {
           UserName:
           <input
             type="text"
-            value={userName}
-            onChange={(e) => setUserName(e.target.value)}
+            value={data.userName}
+            onChange={(e) => handleInputChange(e, "userName")}
           />
         </label>
         <label>
           Password:
           <input
             type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
+            value={data.password}
+            onChange={(e) => handleInputChange(e, "password")}
           />
         </label>
         <button type="submit">Login</button>
