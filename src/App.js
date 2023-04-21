@@ -11,6 +11,7 @@ import Card from "./components/reactFragments/Card";
 import Login from "./components/login/Login";
 import ButtonDelete from "./components/counterTest/ButtonDelete";
 import Wrapper from "./components/Wrapper";
+import LoginTest from "./components/login/LoginTest";
 
 const texts = ["click me1", "click me2", "click me3", "push me"];
 
@@ -24,6 +25,7 @@ function App() {
   };
   return (
     <div className="App">
+      <LoginTest>Login</LoginTest>
       <Wrapper color="lightblue">
         <h2>Text inside of the Wrapper</h2>
       </Wrapper>
