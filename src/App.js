@@ -10,6 +10,7 @@ import UsersList from "./components/userInfo/UsersList";
 import Card from "./components/reactFragments/Card";
 import Login from "./components/login/Login";
 import ButtonDelete from "./components/counterTest/ButtonDelete";
+import Wrapper from "./components/Wrapper";
 
 const texts = ["click me1", "click me2", "click me3", "push me"];
 
@@ -23,6 +24,12 @@ function App() {
   };
   return (
     <div className="App">
+      <Wrapper color="lightblue">
+        <h2>Text inside of the Wrapper</h2>
+      </Wrapper>
+      <Wrapper color="lightgreen">
+        <h2>Call me please</h2>
+      </Wrapper>
       <Login />
       <Card />
       <PetInfo animal="cat" age="15" hasPet={true} />
