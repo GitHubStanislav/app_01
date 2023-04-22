@@ -14,6 +14,7 @@ import Wrapper from "./components/Wrapper";
 import LoginTest from "./components/login/LoginTest";
 import UseEffect from "./components/useEffect/UseEffect";
 import UseStateTest2 from "./reactExamples/UseStateTest2";
+import UseStateObject from "./reactExamples/UseStateObject";
 
 const texts = ["click me1", "click me2", "click me3", "push me"];
 
@@ -27,6 +28,7 @@ function App() {
   };
   return (
     <div className="App">
+      <UseStateObject />
       <UseStateTest2 />
       <LoginTest>Login User</LoginTest>
       <Wrapper color="lightblue">

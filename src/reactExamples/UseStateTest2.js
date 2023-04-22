@@ -1,23 +1,20 @@
 import { useState } from "react";
 function UseStateTest2() {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(() => {
+    return 4;
+  });
+  const incrementNumber = () => {
+    setCount(count + 1);
+  };
+  const decrementNumber = () => {
+    setCount(count - 1);
+  };
+
   return (
     <>
-      <button
-        onClick={() => {
-          setCount(count - 1);
-        }}
-      >
-        -
-      </button>
+      <button onClick={decrementNumber}>-</button>
       <span>{count}</span>
-      <button
-        onClick={() => {
-          setCount(count + 1);
-        }}
-      >
-        +
-      </button>
+      <button onClick={incrementNumber}>+</button>
     </>
   );
 }
