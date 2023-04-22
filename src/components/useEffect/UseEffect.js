@@ -8,7 +8,12 @@ function UseEffect() {
       .then((json) => setTodo(json));
   }, []);
   console.log(todo);
-  return <></>;
+  return (
+    <>
+      {todo && <h1>{todo.title}</h1>}
+      {todo && <p>{todo.userId}</p>}
+    </>
+  );
 }
 
 export default UseEffect;

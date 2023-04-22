@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./Login.css";
-function LoginTest(props) {
+function LoginTest({ children }) {
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
   const handleFormSubmit = (event) => {
@@ -14,32 +14,32 @@ function LoginTest(props) {
     setPassword("");
   };
   return (
-    <>
-      <form onSubmit={handleFormSubmit}>
-        <h2>{props.children} </h2>
-        <label>
-          Name
-          <input
-            type="text"
-            value={userName}
-            onChange={(e) => {
-              setUserName(e.target.value);
-            }}
-          />
-        </label>
-        <label>
-          Password
-          <input
-            type="text"
-            value={password}
-            onChange={(e) => {
-              setPassword(e.target.value);
-            }}
-          />
-        </label>
-        <button>submit</button>
-      </form>
-    </>
+    <form onSubmit={handleFormSubmit}>
+      <h2>{children} </h2>
+      <label htmlFor="userName">
+        Name
+        <input
+          id="userName"
+          type="text"
+          value={userName}
+          onChange={(e) => {
+            setUserName(e.target.value);
+          }}
+        />
+      </label>
+      <label htmlFor="password">
+        Password
+        <input
+          id="password"
+          type="password"
+          value={password}
+          onChange={(e) => {
+            setPassword(e.target.value);
+          }}
+        />
+      </label>
+      <button>submit</button>
+    </form>
   );
 }
 

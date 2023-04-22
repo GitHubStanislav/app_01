@@ -13,6 +13,7 @@ import ButtonDelete from "./components/counterTest/ButtonDelete";
 import Wrapper from "./components/Wrapper";
 import LoginTest from "./components/login/LoginTest";
 import UseEffect from "./components/useEffect/UseEffect";
+import UseStateTest2 from "./reactExamples/UseStateTest2";
 
 const texts = ["click me1", "click me2", "click me3", "push me"];
 
@@ -26,10 +27,10 @@ function App() {
   };
   return (
     <div className="App">
-      <UseEffect />
-      <LoginTest>Login</LoginTest>
+      <UseStateTest2 />
+      <LoginTest>Login User</LoginTest>
       <Wrapper color="lightblue">
-        <h2>Text inside of the Wrapper</h2>
+        <UseEffect />
       </Wrapper>
       <Wrapper color="lightgreen">
         <h2>Call me please</h2>

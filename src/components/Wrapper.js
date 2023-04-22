@@ -1,7 +1,7 @@
 function Wrapper(props) {
   const style = {
     backgroundColor: props.color,
-    width: "250px",
+    width: "550px",
     padding: "20px",
     margin: "20px auto",
   };
