@@ -17,6 +17,7 @@ import UseStateTest2 from "./reactExamples/UseStateTest2";
 import UseStateObject from "./reactExamples/UseStateObject";
 import UseEffectExample from "./reactExamples/UseEffectExample";
 import UseEffectExample1 from "./reactExamples/UseEffectExample1";
+import Posts from "./components/jsonPosts/Posts";
 
 const texts = ["click me1", "click me2", "click me3", "push me"];
 const countInitial = () => {
@@ -34,6 +35,7 @@ function App() {
   };
   return (
     <div className="App">
+      <Posts />
       <UseEffectExample1 />
       <UseEffectExample />
       <UseStateObject />
