@@ -15,11 +15,17 @@ import LoginTest from "./components/login/LoginTest";
 import UseEffect from "./components/useEffect/UseEffect";
 import UseStateTest2 from "./reactExamples/UseStateTest2";
 import UseStateObject from "./reactExamples/UseStateObject";
+import UseEffectExample from "./reactExamples/UseEffectExample";
+import UseEffectExample1 from "./reactExamples/UseEffectExample1";
 
 const texts = ["click me1", "click me2", "click me3", "push me"];
+const countInitial = () => {
+  console.log("run function");
+  return 1;
+};
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(() => countInitial());
   const incrementCount = () => {
     setCount(count + 1);
   };
@@ -28,6 +34,8 @@ function App() {
   };
   return (
     <div className="App">
+      <UseEffectExample1 />
+      <UseEffectExample />
       <UseStateObject />
       <UseStateTest2 />
       <LoginTest>Login User</LoginTest>

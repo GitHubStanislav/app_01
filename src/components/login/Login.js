@@ -8,7 +8,6 @@ function Login() {
   const [data, setData] = useState({ userName: "", password: "" });
   function handleFormSubmit(event) {
     event.preventDefault();
-    console.log(data);
     setData({ ...data, password: "", userName: "" });
   }
 
