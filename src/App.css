@@ -17,6 +17,11 @@
   margin: 10px;
   box-shadow: 0 0.125rem 0.25rem rgba(19, 31, 51, 0.1);
 }
+.card_wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
 button {
   background-color: #1877f2;
   border: none;
