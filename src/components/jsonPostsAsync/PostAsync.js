@@ -1,4 +1,4 @@
-function Post({ userId, title, body }) {
+function PostAsync({ userId, title, body }) {
   return (
     <div className="card">
       <h1>{title}</h1>
@@ -7,4 +7,4 @@ function Post({ userId, title, body }) {
     </div>
   );
 }
-export default Post;
+export default PostAsync;
