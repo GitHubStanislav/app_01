@@ -1,12 +1,18 @@
+import { useState } from "react";
+
 function TodoForm() {
+  const [toDo, setTodo] = useState("");
+  const addTodo = () => {
+      setTodo()
+  };
   return (
     <div>
       <form>
         <label>
           <h1>Todo App</h1>
-          <input placeholder="Enter new todo " />
+          <input value={toDo} type="text" placeholder="Enter new todo " />
         </label>
-        <button>Submit</button>
+        <button onClick={addTodo}>Submit</button>
       </form>
     </div>
   );
