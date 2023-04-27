@@ -1,11 +1,11 @@
 import Todo from "./Todo";
 
-function TodoList({ todos }) {
+function TodoList({ todos, deleteTodo }) {
   return (
     <div>
       {!todos.length && <h2>Todo list is empty</h2>}
       {todos.map((todo, index) => (
-        <Todo key={index} todo={todos} />
+        <Todo key={index} todo={todos} deleteTodo={deleteTodo} index={index} />
       ))}
     </div>
   );

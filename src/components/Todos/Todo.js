@@ -1,6 +1,6 @@
-function Todo({ todo }) {
+function Todo({ todo, index, deleteTodo }) {
   return (
-    <div>
+    <div onDoubleClick={() => deleteTodo(index)}>
       <h3>{todo}</h3>
     </div>
   );
