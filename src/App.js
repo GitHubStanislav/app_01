@@ -7,9 +7,12 @@ import TodoList from "./components/Todos/TodoList";
 
 function App() {
  const [todos , setTodos] = useState([])
+    const addTodoHandler = (text) =>{
+     setTodos([...todos, text])
+    }
   return (
     <div className="App">
-        <TodoForm/>
+        <TodoForm addTodo ={addTodoHandler}/>
         <TodoList todos={todos}/>
     </div>
   );
