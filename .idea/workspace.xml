@@ -34,7 +34,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "To-Do-01",
-    "last_opened_file_path": "C:/Users/Стас/Desktop/reactTest/react-to-do-app1/app_01",
+    "last_opened_file_path": "C:/Users/Стас/Desktop/reactTest/app_01",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -80,6 +80,7 @@
       <updated>1682607793970</updated>
       <workItem from="1682607795836" duration="1625000" />
       <workItem from="1682676332567" duration="3156000" />
+      <workItem from="1682858179461" duration="27000" />
     </task>
     <servers />
   </component>
