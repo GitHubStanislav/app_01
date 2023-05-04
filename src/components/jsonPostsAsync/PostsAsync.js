@@ -34,8 +34,6 @@ function PostsAsync() {
   return (
     <>
       <h1>Posts</h1>
-      <hr />
-      <hr />
       <div className="card_wrapper">
         {isLoading ? (
           <h1>Loading...</h1>
