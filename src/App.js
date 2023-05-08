@@ -18,6 +18,7 @@ import UseStateObject from "./reactExamples/UseStateObject";
 import UseEffectExample from "./reactExamples/UseEffectExample";
 import UseEffectExample1 from "./reactExamples/UseEffectExample1";
 import PostsAsync from "./components/jsonPostsAsync/PostsAsync";
+import CreateUser from "./components/createUserApp/CreateUser";
 
 const texts = ["click me1", "click me2", "click me3", "push me"];
 const countInitial = () => {
@@ -35,6 +36,7 @@ function App() {
   };
   return (
     <div className="App">
+      <CreateUser />
       <PostsAsync />
       <UseEffectExample1 />
       <UseEffectExample />

@@ -1,10 +1,11 @@
 import persons from "../data/persons";
-import UsersInfo from "./UsersInfo";
+import UserInfoCreateApp from "../createUserApp/UserInfoCreateApp";
+
 function UsersList() {
   return (
     <div className="card_wrapper">
       {persons.map((person) => {
-        return <UsersInfo key={person.id} {...person} />;
+        return <UserInfoCreateApp key={person.id} {...person} />;
       })}
     </div>
   );
