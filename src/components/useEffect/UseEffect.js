@@ -7,7 +7,6 @@ function UseEffect() {
       .then((response) => response.json())
       .then((json) => setTodo(json));
   }, []);
-  console.log(todo);
   return (
     <>
       {todo && <h1>{todo.title}</h1>}
