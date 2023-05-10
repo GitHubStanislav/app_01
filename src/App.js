@@ -19,10 +19,11 @@ import UseEffectExample from "./reactExamples/UseEffectExample";
 import UseEffectExample1 from "./reactExamples/UseEffectExample1";
 import PostsAsync from "./components/jsonPostsAsync/PostsAsync";
 import CreateUser from "./components/createUserApp/CreateUser";
-import StartApp from "./components/useEffect/ProjectUseEffect/StartApp";
+import StartApp from "./components/useEffect/ProjectUseReducer/StartApp";
 import UseReducer from "./reactExamples/UseReducer";
 import UseReducerTest from "./reactExamples/UseReducerTest";
 import UseReduceTest1 from "./reactExamples/UseReduceTest1";
+import PostsReducerJson from "./components/jsonPostsReducer/PostsReducerJson";
 
 const texts = ["click me1", "click me2", "click me3", "push me"];
 const countInitial = () => {
@@ -41,6 +42,7 @@ function App() {
   return (
     <div className="App">
       <StartApp />
+      <PostsReducerJson />
       <UseReduceTest1 />
       <UseReducerTest />
       <UseReducer />
