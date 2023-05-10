@@ -1,18 +1,18 @@
 import React, { useReducer } from "react";
-
+const actionState = { count: 0 };
 function reducer(state, action) {
   switch (action.type) {
     case "increment":
-      return { count: state.count + 1 };
+      return { ...state, count: state.count + 1 };
     case "decrement":
-      return { count: state.count - 1 };
+      return { ...state, count: state.count - 1 };
     default:
       throw new Error();
   }
 }
 
-function UseReduse() {
-  const [state, dispatch] = useReducer(reducer, { count: 0 });
+function UseReducer() {
+  const [state, dispatch] = useReducer(reducer, actionState);
 
   return (
     <>
@@ -22,4 +22,4 @@ function UseReduse() {
     </>
   );
 }
-export default UseReduse;
+export default UseReducer;

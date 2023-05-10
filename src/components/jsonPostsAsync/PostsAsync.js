@@ -20,14 +20,6 @@ function PostsAsync() {
     })();
   }, []);
 
-  // useEffect(() => {
-  //   fetch(API_URL)
-  //     .then((response) => response.json())
-  //     .then((posts) => setPosts1(posts))
-  //     .catch((error) => setError(error.message))
-  //     .finally(() => setLoading(false));
-  // }, []);
-
   if (error) {
     return <h1>Error:{error}</h1>;
   }
