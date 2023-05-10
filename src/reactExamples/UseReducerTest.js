@@ -1,15 +1,19 @@
 import { useReducer } from "react";
 
 const initialValue = { count: 10 };
-
+const ACTIONS = {
+  INCREMENT: "increment",
+  DECREMENT: "decrement",
+  PLUS: "plus",
+};
 const reducer = (state, { type, payload }) => {
   switch (type) {
-    case "increment":
-      return { count: state.count + 1 };
-    case "decrement":
-      return { count: state.count - 1 };
-    case "plus":
-      return { count: state.count + payload };
+    case ACTIONS.INCREMENT:
+      return { ...state, count: state.count + 1 };
+    case ACTIONS.DECREMENT:
+      return { ...state, count: state.count - 1 };
+    case ACTIONS.PLUS:
+      return { ...state, count: state.count + payload };
     default:
       return state;
   }
@@ -19,15 +23,15 @@ function UseReducerTest() {
   const [state, dispatch] = useReducer(reducer, initialValue);
 
   const incrementNumber = () => {
-    dispatch({ type: "increment" });
+    dispatch({ type: ACTIONS.INCREMENT });
   };
 
   const decrementNumber = () => {
-    dispatch({ type: "decrement" });
+    dispatch({ type: ACTIONS.DECREMENT });
   };
 
   const incrementPlus = () => {
-    dispatch({ type: "plus", payload: 300 });
+    dispatch({ type: ACTIONS.PLUS, payload: 300 });
   };
 
   return (

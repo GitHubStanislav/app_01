@@ -22,6 +22,7 @@ import CreateUser from "./components/createUserApp/CreateUser";
 import StartApp from "./components/useEffect/ProjectUseEffect/StartApp";
 import UseReducer from "./reactExamples/UseReducer";
 import UseReducerTest from "./reactExamples/UseReducerTest";
+import UseReduceTest1 from "./reactExamples/UseReduceTest1";
 
 const texts = ["click me1", "click me2", "click me3", "push me"];
 const countInitial = () => {
@@ -40,6 +41,7 @@ function App() {
   return (
     <div className="App">
       <StartApp />
+      <UseReduceTest1 />
       <UseReducerTest />
       <UseReducer />
       <CreateUser />
