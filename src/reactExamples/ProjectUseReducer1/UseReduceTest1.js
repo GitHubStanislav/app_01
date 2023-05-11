@@ -1,8 +1,14 @@
 import { useReducer, useState } from "react";
+
+const ACTIONS = {
+  ADD_TODO: "add-todo",
+  TOGGLE_TODO: "toggle-todo",
+};
 const reducer = (todos, action) => {
   switch (action.type) {
     case ACTIONS.ADD_TODO:
       return [...todos, newTodo(action.payload.name)];
+    case ACTIONS.TOGGLE_TODO:
     default:
       return new Error();
   }
@@ -10,9 +16,6 @@ const reducer = (todos, action) => {
 
 const newTodo = (name) => {
   return { id: Date.now(), name: name, complete: false };
-};
-const ACTIONS = {
-  ADD_TODO: "add-todo",
 };
 
 const UseReduceTest1 = () => {
@@ -33,6 +36,9 @@ const UseReduceTest1 = () => {
           onChange={(e) => setName(e.target.value)}
         />
       </form>
+      {todos.map((todo) => {
+        <Todo key={todo.id} todo={todo} />;
+      })}
     </>
   );
 };
