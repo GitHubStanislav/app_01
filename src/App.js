@@ -22,7 +22,7 @@ import CreateUser from "./components/createUserApp/CreateUser";
 import StartApp from "./reactExamples/ProjectUseReducer/StartApp";
 import UseReducer from "./reactExamples/UseReducer";
 import UseReducerTest from "./reactExamples/UseReducerTest";
-import UseReduceTest1 from "./reactExamples/UseReduceTest1";
+import UseReduceTest1 from "./reactExamples/ProjectUseReducer1/UseReduceTest1";
 import PostsReducerJson from "./components/jsonPostsReducer/PostsReducerJson";
 
 const texts = ["click me1", "click me2", "click me3", "push me"];
@@ -42,8 +42,8 @@ function App() {
   return (
     <div className="App">
       <StartApp />
-      <PostsReducerJson />
       <UseReduceTest1 />
+      <PostsReducerJson />
       <UseReducerTest />
       <UseReducer />
       <CreateUser />

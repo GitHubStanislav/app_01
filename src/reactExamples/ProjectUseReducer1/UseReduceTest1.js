@@ -1,14 +1,24 @@
 import { useReducer, useState } from "react";
+import TodoProjectReducer1 from "./TodoProjectReducer1";
 
-const ACTIONS = {
+export const ACTIONS = {
   ADD_TODO: "add-todo",
   TOGGLE_TODO: "toggle-todo",
+  DELETE_TODO: "delete-todo",
 };
 const reducer = (todos, action) => {
   switch (action.type) {
     case ACTIONS.ADD_TODO:
       return [...todos, newTodo(action.payload.name)];
     case ACTIONS.TOGGLE_TODO:
+      return todos.map((todo) => {
+        if (todo.id === action.payload.id) {
+          return { ...todo, complete: !todo.complete };
+        }
+        return todo;
+      });
+    case ACTIONS.DELETE_TODO:
+      return todos.filter((todo) => todo.id !== action.payload.id);
     default:
       return new Error();
   }
@@ -37,7 +47,9 @@ const UseReduceTest1 = () => {
         />
       </form>
       {todos.map((todo) => {
-        <Todo key={todo.id} todo={todo} />;
+        return (
+          <TodoProjectReducer1 key={todo.id} {...todo} dispatch={dispatch} />
+        );
       })}
     </>
   );
