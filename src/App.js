@@ -24,6 +24,7 @@ import UseReducer from "./reactExamples/UseReducer";
 import UseReducerTest from "./reactExamples/UseReducerTest";
 import UseReduceTest1 from "./reactExamples/ProjectUseReducer1/UseReduceTest1";
 import PostsReducerJson from "./components/jsonPostsReducer/PostsReducerJson";
+import App1 from "./components/httpProjectJoke/App1";
 
 const texts = ["click me1", "click me2", "click me3", "push me"];
 const countInitial = () => {
@@ -42,6 +43,7 @@ function App() {
   return (
     <div className="App">
       <StartApp />
+      <App1 />
       <UseReduceTest1 />
       <PostsReducerJson />
       <UseReducerTest />
