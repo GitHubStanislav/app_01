@@ -1,30 +1,34 @@
-import React from "react";
+import axios from "axios";
+import React, { useState } from "react";
 import JokeList from "./components/JokeList";
 import styles from "./App1.module.css";
 
 function App() {
-  const dummyJokes = [
-    {
-      id: 1,
-      type: "general",
-      setup: "What do you call a bee that lives in America?",
-      punchline: "A USB.",
-    },
-    {
-      id: 2,
-      type: "programming",
-      setup: "What's the best thing about a Boolean?",
-      punchline: "Even if you're wrong, you're only off by a bit.",
-    },
-  ];
+  const [jokes, setJokes] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+
+  const fetchJokesHandler = async () => {
+    setIsLoading(true);
+    try {
+      const response = await axios.get(
+        "https://official-joke-api.appspot.com/random_ten"
+      );
+      setJokes(response.data);
+    } catch (error) {
+      console.error(error);
+    }
+    setIsLoading(false);
+  };
 
   return (
     <>
       <section>
-        <button>Fetch Jokes</button>
+        <button onClick={fetchJokesHandler}>Fetch Jokes</button>
       </section>
       <section>
-        <JokeList jokes={dummyJokes} />
+        {!isLoading && jokes.length > 0 && <JokeList jokes={jokes} />}
+        {!isLoading && jokes.length === 0 && <p>Jokes will be here:) )))</p>}
+        {isLoading && <p>Loading...</p>}
       </section>
     </>
   );
