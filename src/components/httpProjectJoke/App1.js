@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useCallback, useEffect, useState } from "react";
 import JokeList from "./components/JokeList";
 import styles from "./App1.module.css";
+import AddJoke from "./components/AddJoke";
 
 function App() {
   const [jokes, setJokes] = useState([]);
@@ -26,8 +27,15 @@ function App() {
     fetchJokesHandler();
   }, [fetchJokesHandler]);
 
+  const addJokeHandler = (joke) => {
+    console.log(joke);
+  };
+
   return (
     <>
+      <section>
+        <AddJoke onAddJoke={addJokeHandler} />
+      </section>
       <section>
         <button onClick={fetchJokesHandler}>Fetch Jokes</button>
       </section>
