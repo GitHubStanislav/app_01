@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import JokeList from "./components/JokeList";
 import styles from "./App1.module.css";
 
@@ -8,7 +8,7 @@ function App() {
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(null);
 
-  const fetchJokesHandler = async () => {
+  const fetchJokesHandler = useCallback(async () => {
     setIsLoading(true);
     try {
       const response = await axios.get(
@@ -20,7 +20,11 @@ function App() {
       setIsError(error);
       console.error(error);
     }
-  };
+  }, []);
+
+  useEffect(() => {
+    fetchJokesHandler();
+  }, [fetchJokesHandler]);
 
   return (
     <>
