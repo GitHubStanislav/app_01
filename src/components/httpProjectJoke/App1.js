@@ -13,12 +13,15 @@ function App() {
     setIsLoading(true);
     try {
       const response = await axios.get(
-        "https://official-joke-api.appspot.com/random_ten"
+        "https://react-cource-http-b1835-default-rtdb.firebaseio.com/jokes.json"
       );
+
       setJokes(response.data);
+      console.log(response.data);
       setIsLoading(false);
     } catch (error) {
       setIsError(error);
+      setIsLoading(false);
       console.error(error);
     }
   }, []);
@@ -27,8 +30,20 @@ function App() {
     fetchJokesHandler();
   }, [fetchJokesHandler]);
 
-  const addJokeHandler = (joke) => {
-    console.log(joke);
+  const addJokeHandler = async (joke) => {
+    setIsLoading(true);
+    try {
+      await axios.post(
+        "https://react-cource-http-b1835-default-rtdb.firebaseio.com/jokes.json",
+        JSON.stringify(joke)
+      );
+      setIsLoading(false);
+      // Дополнительные действия, если требуется после успешного добавления шутки
+    } catch (error) {
+      setIsError(error);
+      setIsLoading(false);
+      console.error(error);
+    }
   };
 
   return (
@@ -40,8 +55,11 @@ function App() {
         <button onClick={fetchJokesHandler}>Fetch Jokes</button>
       </section>
       <section>
-        {!isLoading && jokes.length > 0 && <JokeList jokes={jokes} />}
-        {!isLoading && jokes.length === 0 && <p>Jokes will be here:)))</p>}
+        {!isLoading && jokes.length > 0 ? (
+          <JokeList jokes={jokes} />
+        ) : (
+          <p>Jokes will be here:)))</p>
+        )}
         {isError && <p>Error: {isError.message}</p>}
         {isLoading && !isError && <p>Loading...</p>}
       </section>
