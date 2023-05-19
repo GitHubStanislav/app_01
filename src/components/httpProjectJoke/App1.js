@@ -15,9 +15,19 @@ function App() {
       const response = await axios.get(
         "https://react-cource-http-b1835-default-rtdb.firebaseio.com/jokes.json"
       );
+      const loadedJokes = [];
+      for (const key in response.data) {
+        loadedJokes.push({
+          id: key,
+          type: response.data[key].type,
+          setup: response.data[key].setup,
+          punchline: response.data[key].punchline,
+        });
+      }
 
-      setJokes(response.data);
-      console.log(response.data);
+      setJokes(loadedJokes);
+
+      console.log(loadedJokes);
       setIsLoading(false);
     } catch (error) {
       setIsError(error);
