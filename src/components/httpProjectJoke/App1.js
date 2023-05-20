@@ -1,7 +1,6 @@
 import axios from "axios";
 import React, { useCallback, useEffect, useState } from "react";
 import JokeList from "./components/JokeList";
-import styles from "./App1.module.css";
 import AddJoke from "./components/AddJoke";
 
 function App() {

@@ -25,7 +25,6 @@ import UseReducerTest from "./reactExamples/UseReducerTest";
 import UseReduceTest1 from "./reactExamples/ProjectUseReducer1/UseReduceTest1";
 import PostsReducerJson from "./components/jsonPostsReducer/PostsReducerJson";
 import App1 from "./components/httpProjectJoke/App1";
-import GptRes1 from "./components/GPT-resume/GptRes1";
 import ReduxStarter from "./components/redux-starter/ReduxStarter";
 
 const texts = ["click me1", "click me2", "click me3", "push me"];
@@ -45,13 +44,12 @@ function App() {
   return (
     <div className="App">
       <StartApp />
+      <UseReducer />
       <ReduxStarter />
-      <GptRes1 />
       <App1 />
       <UseReduceTest1 />
       <PostsReducerJson />
       <UseReducerTest />
-      <UseReducer />
       <CreateUser />
       <PostsAsync />
       <UseEffectExample1 />
