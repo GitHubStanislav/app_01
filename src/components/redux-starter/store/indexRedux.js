@@ -1,5 +1,27 @@
 import { createStore } from "redux";
+import { createSlice } from "@reduxjs/toolkit";
+
 const initialState = { counter: 0, isCounterIsVisible: false };
+
+createSlice({
+  name: "counter",
+  initialState: initialState,
+  reducers: {
+    increment(state) {
+      state.counter++;
+    },
+    decrement(state) {
+      state.counter--;
+    },
+    increase(state, action) {
+      state.counter = state.counter + action.number;
+    },
+
+    setCounterVisibility(state) {
+      state.isCounterIsVisible = !state.isCounterIsVisible;
+    },
+  },
+});
 const counterReducer = (state = initialState, action) => {
   if (action.type === "increment") {
     return {
